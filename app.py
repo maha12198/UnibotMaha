@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config[ 'SECRET_KEY' ] = 'jsbcfsbfjefebw237u3gdbdc'
 socketio = SocketIO( app )
 
-@app.route( '/' )
+@app.route( '/', methods=['GET','POST'])
 def hello():
   return render_template( './ChatApp.html' )
 
