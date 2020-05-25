@@ -20,7 +20,7 @@ def handle_my_custom_event1( json1 ):
   message = json1['message']
   answer=model.chat(message)
   json1['answer'] = answer
-  json1['bot']='AdhocBot'
+  json1['bot']='UniBot'
   print( 'recived my event: ' + str(json1 ))
   socketio.emit( 'my response', json1, callback=messageRecived )
 
